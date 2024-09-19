@@ -22,39 +22,39 @@ import './styles/markdown.css'
 import 'uno.css'
 
 export const createApp = ViteSSG(
-  App,
-  {
-    routes,
-  },
-  ({ router, app, isClient }) => {
-    dayjs.extend(LocalizedFormat)
+    App,
+    {
+        routes,
+    },
+    ({ router, app, isClient }) => {
+        dayjs.extend(LocalizedFormat)
 
-    app.use(FloatingVue)
-    app.use(createPinia())
+        app.use(FloatingVue)
+        app.use(createPinia())
 
-    if (isClient) {
-      const html = document.querySelector('html')!
-      setupRouterScroller(router, {
-        selectors: {
-          html(ctx) {
-            // only do the sliding transition when the scroll position is not 0
-            // Disable sliding transition on Dev Mode
-            if (ctx.savedPosition?.top || import.meta.hot)
-              html.classList.add('no-sliding')
-            else
-              html.classList.remove('no-sliding')
-            return true
-          },
-        },
-        behavior: 'auto',
-      })
+        if (isClient) {
+            const html = document.querySelector('html')!
+            setupRouterScroller(router, {
+                selectors: {
+                    html(ctx) {
+                        // only do the sliding transition when the scroll position is not 0
+                        // Disable sliding transition on Dev Mode
+                        if (ctx.savedPosition?.top || import.meta.hot)
+                            html.classList.add('no-sliding')
+                        else
+                            html.classList.remove('no-sliding')
+                        return true
+                    },
+                },
+                behavior: 'auto',
+            })
 
-      router.beforeEach(() => {
-        NProgress.start()
-      })
-      router.afterEach(() => {
-        NProgress.done()
-      })
-    }
-  },
+            router.beforeEach(() => {
+                NProgress.start()
+            })
+            router.afterEach(() => {
+                NProgress.done()
+            })
+        }
+    },
 )

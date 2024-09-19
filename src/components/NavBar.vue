@@ -17,7 +17,7 @@ const { y: scroll } = useWindowScroll()
         </RouterLink>
         <button
             title="Scroll to top" fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full hover-bg-hex-8883 transition
-            duration-300 z-100 print:hidden :class="scroll > 300 ? 'op30' : 'op0! pointer-events-none'" @click="toTop()"
+            duration-300 z-100 print:hidden :class="scroll > 300 ? 'op60' : 'op0! pointer-events-none'" @click="toTop()"
         >
             <div i-ri-arrow-up-line />
         </button>
@@ -25,8 +25,15 @@ const { y: scroll } = useWindowScroll()
             <div class="spacer" />
             <div class="right" print:op0>
                 <RouterLink to="/posts" title="Blog">
+                    <!-- <div i-ri-article-line /> -->
                     <span class="lt-md:hidden">Blog</span>
-                    <div i-ri-article-line md:hidden />
+                </RouterLink>
+                <RouterLink to="/game" title="Game">
+                    <!-- <div i-ri-game-line /> -->
+                    <span class="lt-md:hidden">Game</span>
+                </RouterLink>
+                <RouterLink to="/Notes" title="Notes">
+                    <span class="lt-md:hidden">Notes</span>
                 </RouterLink>
                 <!-- <RouterLink to="/projects" title="Projects">
                     <span class="lt-md:hidden">Projects</span>
@@ -49,7 +56,7 @@ const { y: scroll } = useWindowScroll()
                     <div i-ri-chat-1-line />
                 </RouterLink> -->
 
-                <a href="https://github.com/NobitaYuan" target="_blank" title="GitHub" class="lt-md:hidden">
+                <a href="https://github.com/Nobita Yuan" target="_blank" title="GitHub" class="lt-md:hidden">
                     <div i-uil-github-alt />
                 </a>
                 <ToggleTheme />

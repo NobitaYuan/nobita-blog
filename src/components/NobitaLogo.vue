@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const logo = new URL('../../public/nobita_logo.png', import.meta.url).href
+const logo = new URL('../../public/nobita_logo.svg', import.meta.url).href
 </script>
 
 <template>

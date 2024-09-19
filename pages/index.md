@@ -1,13 +1,26 @@
 ---
-title: NobitaYuan
-description: NobitaYuan's Portfolio
+title: Nobita Yuan
+description: Nobita Yuan's Portfolio
 image: https://antfu.me/og.png
 art: random
 ---
 
-Hey, I am NobitaYuan, a fanatical open sourceror.
+Hey, I am Nobita Yuan, a Front End Developer.
 
-<!-- Working at {NuxtLabs}<br>
+你好，我是Nobita Yuan，一位23年毕业的前端开发小伙儿~
+
+---
+
+技术栈主用 {Vue} {Vite} {TypeScript} ...
+
+围绕 {Vue} 的生态，有较多的技术积累和实践经验
+
+线上项目：{闪光简历} 的核心开发者
+
+并且也是一名 {Vim} 使用者
+
+<!-- {Vue} {Vite} {Node.js} {TailwindCSS}
+{TypeScript} lover Working at {NuxtLabs}<br>
 Creator of {Vitest} {Slidev} {VueUse} {UnoCSS} {Elk} {Type Challenges}<br>
 Core team of {Vue} {Nuxt} {Vite}<br>
 Maintaining {Shiki} {Twoslash} {ESLint Stylistic} -->

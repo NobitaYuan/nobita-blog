@@ -124,6 +124,9 @@ export default defineConfig({
 
                 md.use(MarkdownItMagicLink, {
                     linksMap: {
+                        '闪光简历': 'https://www.shineresume.com',
+                        'TypeScript': 'https://www.typescriptlang.org',
+                        'Vim': 'https://www.vim.org',
                         'NuxtLabs': 'https://nuxtlabs.com',
                         'Vitest': 'https://github.com/vitest-dev/vitest',
                         'Slidev': 'https://github.com/slidevjs/slidev',
@@ -145,6 +148,7 @@ export default defineConfig({
                         'Astro': 'https://github.com/withastro/astro',
                         'TwoSlash': 'https://github.com/twoslashes/twoslash',
                         'Anthony Fu Collective': { link: 'https://opencollective.com/antfu', imageUrl: 'https://github.com/antfu-collective.png' },
+                        'Anthony Fu': { link: 'https://antfu.me' },
                         'Netlify': { link: 'https://netlify.com', imageUrl: 'https://github.com/netlify.png' },
                         'Stackblitz': { link: 'https://stackblitz.com', imageUrl: 'https://github.com/stackblitz.png' },
                         'Vercel': { link: 'https://vercel.com', imageUrl: 'https://github.com/vercel.png' },

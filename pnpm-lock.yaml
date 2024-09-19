@@ -143,8 +143,8 @@ devDependencies:
     specifier: ^0.6.0
     version: 0.6.0
   p5i:
-    specifier: ^0.5.0
-    version: 0.5.0
+    specifier: ^0.4.2
+    version: 0.4.2
   picocolors:
     specifier: ^1.1.0
     version: 1.1.0
@@ -1727,8 +1727,8 @@ packages:
     resolution: {integrity: sha512-k7kRA033QNtC+gLc4VPlfnue58CM1iQLgn1IMAU8VPHGOj7oIHPp9UlhedEnD/Gl8evoCjwkZjlBORtZ3JByUA==}
     dev: true
 
-  /@types/p5@1.7.6:
-    resolution: {integrity: sha512-6pLTOo0V3N5jZb5nTwjiv3lPHLK3Z/TjbhQUj8CTWXocUk1Z/f6OHTp3Pcwi1BhWnf5gqKUcyEb1gP0KIJuQgw==}
+  /@types/p5@0.9.1:
+    resolution: {integrity: sha512-4glOKdqdBiRWDFZwi/MjHudPV2U4t2L4fTTSacGapfFxyNXzZcAshAjqmrJkCIZcFlhRBEAL7AM95xRDMfrIwg==}
     dev: true
 
   /@types/prompts@2.4.9:
@@ -5207,10 +5207,10 @@ packages:
     resolution: {integrity: sha512-6cWYBFhnZz7jNC6p1VWvlt3QReMqrRSmO90bgECQIKB9oko2w/sKrOAVMyei5tjIzSYcSY0JHy+BRtSAWq24jQ==}
     dev: true
 
-  /p5i@0.5.0:
-    resolution: {integrity: sha512-ahLCSoab5pD6fCpqxLcXhDPyDIrJHQpeGDeC4RDouflWJuXi0LVsGjbwS/ODLkpXRfLTHzV6C9t32kz3iMuPBA==}
+  /p5i@0.4.2:
+    resolution: {integrity: sha512-AcnrXpSkmbBg8XK4CVSbK/P+p9BaZT2Du5lpbF4vWO/9tnomvsu8cSa64Ol7bWSQdd0kMtK1tbcQsLgUa6+Yzg==}
     dependencies:
-      '@types/p5': 1.7.6
+      '@types/p5': 0.9.1
       p5: 1.10.0
     dev: true
 

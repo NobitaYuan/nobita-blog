@@ -1,7 +1,7 @@
 ---
-title: Blog - Anthony Fu
+title: Blog - Nobita Yuan
 display: ''
-art: plum
+art: random
 ---
 
 <SubNav />
