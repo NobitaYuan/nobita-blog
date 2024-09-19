@@ -44,5 +44,3 @@ Find me on
 Or mail me at <a title="mailto" target="_blank" href="mailto:nobitayuan@qq.com">nobitayuan@qq.com</a>
 
 ---
-
-<!-- <SponsorButtons /> -->

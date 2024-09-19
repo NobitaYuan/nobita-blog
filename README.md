@@ -3,7 +3,7 @@
 my personal website
 
 <br>
-fork by <a href='https://antfu.me'>antfu.me</a>
+fork by <a href='https://antfu.me'>antfu.me</a> and modified by myself
 <br>
 <br>
 <samp>code is licensed under <a href='./LICENSE'>MIT</a>,<br> words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a></samp>.
