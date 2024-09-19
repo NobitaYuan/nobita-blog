@@ -124,6 +124,8 @@ export default defineConfig({
 
                 md.use(MarkdownItMagicLink, {
                     linksMap: {
+                        '禁字决无伤识破寅虎': 'https://www.bilibili.com/video/BV17YswexE9g',
+                        'bilibili': 'https://www.bilibili.com',
                         '闪光简历': 'https://www.shineresume.com',
                         'TypeScript': 'https://www.typescriptlang.org',
                         'Vim': 'https://www.vim.org',
