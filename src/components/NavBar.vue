@@ -1,26 +1,12 @@
 <script setup lang="ts">
-function toTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-    })
-}
-
 const { y: scroll } = useWindowScroll()
 </script>
 
 <template>
-    <header class="header z-40">
+    <header class="header" :class="{ isScroll: scroll > 80 }">
         <RouterLink class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none" to="/" focusable="false">
-            <!-- <Logo /> -->
             <NobitaLogo />
         </RouterLink>
-        <button
-            title="Scroll to top" fixed right-3 bottom-3 w-10 h-10 hover:op100 rounded-full hover-bg-hex-8883 transition
-            duration-300 z-100 print:hidden :class="scroll > 300 ? 'op60' : 'op0! pointer-events-none'" @click="toTop()"
-        >
-            <div i-ri-arrow-up-line />
-        </button>
         <nav class="nav">
             <div class="spacer" />
             <div class="right" print:op0>
@@ -66,18 +52,24 @@ const { y: scroll } = useWindowScroll()
 </template>
 
 <style scoped>
-.header h1 {
-    margin-bottom: 0;
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
 }
-
-.logo {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
+.isScroll {
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    background-image: radial-gradient(transparent 1px, #ffffff25 2px);
+    background-size: 4px 4px;
+    backdrop-filter: saturate(50%) blur(4px);
+    -webkit-backdrop-filter: saturate(50%) blur(4px);
 }
 
 .nav {
-    padding: 2rem;
+    padding: 1.5rem 2rem;
+    padding-bottom: 1.5rem;
     width: 100%;
     display: grid;
     grid-template-columns: auto max-content;

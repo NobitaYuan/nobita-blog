@@ -37,14 +37,28 @@ onKeyStroke('Escape', (e) => {
 
 <template>
     <NavBar />
-    <main class="px-7 py-10 of-x-hidden">
+    <main class="main">
         <RouterView />
         <Footer :key="route.path" />
     </main>
+    <ToTop />
     <Transition name="fade">
-        <div v-if="imageModel" fixed top-0 left-0 right-0 bottom-0 z-500 backdrop-blur-7 @click="imageModel = undefined">
+        <div
+            v-if="imageModel" fixed top-0 left-0 right-0 bottom-0 z-500 backdrop-blur-7
+            @click="imageModel = undefined"
+        >
             <div absolute top-0 left-0 right-0 bottom-0 bg-black:30 z--1 />
-            <img :src="imageModel.src" :alt="imageModel.alt" :class="imageModel.className" max-w-screen max-h-screen w-full h-full object-contain>
+            <img
+                :src="imageModel.src" :alt="imageModel.alt" :class="imageModel.className" max-w-screen max-h-screen
+                w-full h-full object-contain
+            >
         </div>
     </Transition>
 </template>
+
+<style scoped>
+.main {
+    padding: calc(88px + 2.5rem) 1.75rem 2.5rem;
+    overflow-x: hidden;
+}
+</style>
