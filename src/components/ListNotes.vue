@@ -41,6 +41,8 @@ function isSameGroup(a: Post, b?: Post) {
 function getGroupName(p: Post) {
     if (isFuture(p.date))
         return 'Upcoming'
+    if (p.date === 'now')
+        return getYear(new Date())
     return getYear(p.date)
 }
 </script>
@@ -62,7 +64,7 @@ function getGroupName(p: Post) {
             >
                 <span
                     text-8em color-transparent absolute left--3rem top--2rem font-bold text-stroke-2 text-stroke-hex-aaa
-                    op10
+                    op15
                 >{{ getGroupName(route) }}</span>
             </div>
             <div

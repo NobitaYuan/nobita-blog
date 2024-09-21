@@ -1,7 +1,9 @@
 // axios
 import Axios from 'axios'
 
-const service = Axios.create({})
+const service = Axios.create({
+
+})
 
 // 请求拦截
 service.interceptors.request.use((config) => {

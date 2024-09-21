@@ -41,6 +41,8 @@ function isSameGroup(a: Post, b?: Post) {
 function getGroupName(p: Post) {
     if (isFuture(p.date))
         return 'Upcoming'
+    if (p.date === 'now')
+        return getYear(new Date())
     return getYear(p.date)
 }
 </script>

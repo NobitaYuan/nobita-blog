@@ -240,10 +240,10 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            '/bing': {
+            '/bing-api': {
                 target: 'https://cn.bing.com',
                 changeOrigin: true,
-                rewrite: path => path.replace(/^\/bing/, ''),
+                rewrite: path => path.replace(/^\/bing-api/, ''),
             },
         },
     },
