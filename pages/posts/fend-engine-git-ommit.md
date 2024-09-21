@@ -7,6 +7,8 @@ type: blog
 date: 2023-8-7
 ---
 
+[[toc]]
+
 ## 需要的工具
 
 ### commitlint

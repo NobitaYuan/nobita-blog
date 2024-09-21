@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router/auto'
+import { navList } from '~/store/nav'
 
 const inactiveStyle = 'opacity-20 hover:opacity-50'
 const activeStyle = 'opacity-100 underline'
@@ -15,24 +16,22 @@ const route = useRoute()
         </button> -->
 
         <div mb-0 flex="~ col gap-1 sm:row sm:gap-3 wrap" text-3xl>
-            <RouterLink to="/posts" class="!border-none" :class="route.path === '/posts' ? activeStyle : inactiveStyle">
-                Blog
-            </RouterLink>
-            <RouterLink to="/game" class="!border-none" :class="route.path === '/game' ? activeStyle : inactiveStyle">
-                Game
-            </RouterLink>
-            <!-- <RouterLink to="/talks" class="!border-none" :class="route.path === '/talks' ? activeStyle : inactiveStyle">
-                Talks
-            </RouterLink>
-            <RouterLink to="/podcasts" class="!border-none" :class="route.path === '/podcasts' ? activeStyle : inactiveStyle">
+            <template v-for="item in navList" :key="item.path">
+                <RouterLink
+                    :to="item.path"
+                    class="!border-none"
+                    :title="item.name"
+                    :class="route.path === item.path ? activeStyle : inactiveStyle"
+                >
+                    {{ item.name }}
+                </RouterLink>
+            </template>
+            <!-- <RouterLink to="/podcasts" class="!border-none" :class="route.path === '/podcasts' ? activeStyle : inactiveStyle">
                 Podcasts
             </RouterLink>
             <RouterLink to="/streams" class="!border-none" :class="route.path === '/streams' ? activeStyle : inactiveStyle">
                 Streams
             </RouterLink> -->
-            <RouterLink to="/notes" class="!border-none" :class="route.path === '/notes' ? activeStyle : inactiveStyle">
-                Notes
-            </RouterLink>
         </div>
     </div>
 </template>

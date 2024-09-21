@@ -8,12 +8,14 @@ html {
     background-color: var(--c-bg);
     overflow-x: hidden;
     overflow-y: scroll;
+    --logo-color: #000;
 }
 
 html.dark {
     --c-bg: #050505;
     --c-scrollbar: #111;
     --c-scrollbar-hover: #222;
+    --logo-color: #fff;
 }
 
 ::selection {

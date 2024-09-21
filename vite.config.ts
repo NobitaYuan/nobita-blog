@@ -240,6 +240,15 @@ export default defineConfig({
     ssgOptions: {
         formatting: 'minify',
     },
+    server: {
+        proxy: {
+            '/bing': {
+                target: 'https://cn.bing.com',
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/bing/, ''),
+            },
+        },
+    },
 })
 
 const ogSVg = fs.readFileSync('./scripts/og-template.svg', 'utf-8')

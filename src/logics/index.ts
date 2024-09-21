@@ -56,7 +56,10 @@ export function toggleDark(event: MouseEvent) {
 }
 
 export function formatDate(d: string | Date, onlyDate = true) {
-    const date = dayjs(d)
+    let date = dayjs(d)
+    if (d === 'now') {
+        date = dayjs()
+    }
     // 设置为中文
     if (onlyDate || date.year() === dayjs().year())
         return date.format('MMM D')

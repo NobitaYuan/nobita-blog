@@ -6,6 +6,8 @@ type: game
 place: 灵山
 ---
 
+[[toc]]
+
 历经81小时也终于是完成了九九八十一难!
 ![81全成就](/images/bmwk-2.png)
 

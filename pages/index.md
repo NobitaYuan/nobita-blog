@@ -7,11 +7,11 @@ art: random
 
 Hey, I am Nobita Yuan, a Front End Developer.
 
-你好，我是Nobita Yuan，一位23年毕业的前端开发小伙儿~
+你好，我是Nobita Yuan，一位23年毕业的前端新人
 
 ---
 
-技术栈主用 {Vue} {Vite} {TypeScript} ...
+主用技术栈 {Vue} {Vite} {TypeScript} ...
 
 围绕 {Vue} 的生态，有较多的技术积累和实践经验
 

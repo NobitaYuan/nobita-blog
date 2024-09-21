@@ -75,22 +75,16 @@ onMounted(() => {
 })
 
 const ArtComponent = computed(() => {
-    try {
-        let art = frontmatter.art
-        if (art === 'random')
-            art = Math.random() > 0.1 ? 'plum' : 'dots'
-        if (typeof window !== 'undefined') {
-            if (art === 'plum')
-                return defineAsyncComponent(() => import('./ArtPlum.vue'))
-            else if (art === 'dots')
-                return defineAsyncComponent(() => import('./ArtDots.vue'))
-        }
-        return undefined
+    let art = frontmatter.art
+    if (art === 'random')
+        art = Math.random() > 0.1 ? 'plum' : 'dots'
+    if (typeof window !== 'undefined') {
+        if (art === 'plum')
+            return defineAsyncComponent(() => import('./ArtPlum.vue'))
+        else if (art === 'dots')
+            return defineAsyncComponent(() => import('./ArtDots.vue'))
     }
-    catch (e) {
-        console.error(e)
-        return undefined
-    }
+    return undefined
 })
 </script>
 
@@ -124,7 +118,7 @@ const ArtComponent = computed(() => {
     <article ref="content" :class="[frontmatter.tocAlwaysOn ? 'toc-always-on' : '', frontmatter.class]">
         <slot />
     </article>
-    <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-8 slide-enter animate-delay-500 print:hidden">
+    <div v-if="route.path !== '/'" class="prose m-auto mt-8 mb-6 slide-enter animate-delay-500 print:hidden">
         <!-- <template v-if="frontmatter.duration">
             <span font-mono op50>> </span>
             <span op50>comment on </span>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { navList } from '~/store/nav'
+
 const { y: scroll } = useWindowScroll()
 </script>
 
@@ -10,17 +12,18 @@ const { y: scroll } = useWindowScroll()
         <nav class="nav">
             <div class="spacer" />
             <div class="right" print:op0>
-                <RouterLink to="/posts" title="Blog">
-                    <!-- <div i-ri-article-line /> -->
-                    <span class="">Blog</span>
-                </RouterLink>
-                <RouterLink to="/game" title="Game">
-                    <!-- <div i-ri-game-line /> -->
-                    <span class="">Game</span>
-                </RouterLink>
-                <RouterLink to="/Notes" title="Notes">
-                    <span class="">Notes</span>
-                </RouterLink>
+                <template v-for="item in navList" :key="item.path">
+                    <RouterLink
+                        :to="item.path"
+                        :title="item.name"
+                        :active-class=" $route.path === item.path ? '!opacity-100' : ''"
+                    >
+                        {{ item.name }}
+                    </RouterLink>
+                </template>
+                <!-- <div i-ri-article-line /> -->
+                <!-- <div i-ri-game-line /> -->
+
                 <!-- <RouterLink to="/projects" title="Projects">
                     <span class="lt-md:hidden">Projects</span>
                     <div i-ri-lightbulb-line class="md:hidden" />
@@ -28,10 +31,7 @@ const { y: scroll } = useWindowScroll()
                 <RouterLink to="/talks" class="lt-md:hidden" title="Talks">
                     Talks
                 </RouterLink> -->
-                <!-- <RouterLink to="/sponsors-list" title="Sponsors">
-                    <span class="lt-md:hidden">Sponsors</span>
-                    <div i-ri-heart-line class="md:hidden" />
-                </RouterLink> -->
+
                 <!-- <RouterLink to="/podcasts" class="lt-md:hidden" title="Podcasts">
                     <div i-ri-mic-line />
                 </RouterLink> -->

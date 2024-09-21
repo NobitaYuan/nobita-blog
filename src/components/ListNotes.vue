@@ -11,8 +11,8 @@ const props = defineProps<{
 
 const router = useRouter()
 const routes: Post[] = router.getRoutes()
-    .filter(i => i.path.startsWith('/posts') && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
-    .filter(i => !i.path.endsWith('.html') && (i.meta.frontmatter.type || 'blog').split('+').includes(props.type))
+    .filter(i => i.path.startsWith('/notes') && i.meta.frontmatter.date && !i.meta.frontmatter.draft)
+    .filter(i => !i.path.endsWith('.html') && (i.meta.frontmatter.type || 'game').split('+').includes(props.type))
     .map(i => ({
         path: i.meta.frontmatter.redirect || i.path,
         title: i.meta.frontmatter.title,
@@ -62,7 +62,7 @@ function getGroupName(p: Post) {
             >
                 <span
                     text-8em color-transparent absolute left--3rem top--2rem font-bold text-stroke-2 text-stroke-hex-aaa
-                    op15
+                    op10
                 >{{ getGroupName(route) }}</span>
             </div>
             <div
