@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { request } from '~/utils/axios'
-import { isDev } from '~/utils/isDev'
+// import { isDev } from '~/utils/isDev'
 
 async function getBingWallpaper() {
     const { data } = await request({
-        baseURL: isDev ? '/bing-api' : 'https://cn.bing.com',
+        baseURL: '/bing-api',
         url: '/HPImageArchive.aspx',
         method: 'GET',
         params: {
