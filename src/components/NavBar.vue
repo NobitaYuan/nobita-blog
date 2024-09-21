@@ -57,7 +57,7 @@ const { y: scroll } = useWindowScroll()
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 99;
 }
 .isScroll {
     /* background-color: rgba(255, 255, 255, 0.5); */
