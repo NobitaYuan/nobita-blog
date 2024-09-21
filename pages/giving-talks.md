@@ -11,9 +11,9 @@ Hey! My name is [Anthony Fu](/). I am a fanatical open sourceror living in Paris
 
 If you are organizing a frontend related conference or meetup, I'd be happy to give a talk!
 
-- I am currently only doing **in-person** talks.
-- I would expect my travel and accommodation to be covered.
-- I am holding a Chinese passport with Schengen visa. Which means for conferences outside of Schengen area (US, UK, etc.) I would need some assistance on the business visa application.
+-   I am currently only doing **in-person** talks.
+-   I would expect my travel and accommodation to be covered.
+-   I am holding a Chinese passport with Schengen visa. Which means for conferences outside of Schengen area (US, UK, etc.) I would need some assistance on the business visa application.
 
 You can reach me out at [talks@antfu.me](mailto:talks@antfu.me). Looking forward to it!
 

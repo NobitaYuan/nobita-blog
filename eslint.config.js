@@ -5,15 +5,18 @@ import antfu from '@antfu/eslint-config'
 export default antfu(
     {
         formatters: true,
-        markdown: {
-            overrides: {
-                'ts/no-empty-object-type': 'off',
-            },
-        },
+        markdown: false,
+        // markdown: {
+        //     overrides: {
+        //         'ts/no-empty-object-type': 'off',
+        //     },
+        // },
         stylistic: {
             indent: 4, // 4, or 'tab'
             quotes: 'single', // or 'double'
         },
+        yaml: false,
+
     },
     {
         rules: {

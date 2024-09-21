@@ -89,6 +89,6 @@
         "pre-commit": "npx lint-staged"
     },
     "lint-staged": {
-        "*": "echo 'skip linting'"
+        "*": "eslint --fix"
     }
 }
