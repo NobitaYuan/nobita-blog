@@ -1,4 +1,8 @@
-export const navList = [
+interface navListItemType {
+    path: string
+    name: string
+}
+export const navList: navListItemType[] = [
     {
         path: '/posts',
         name: 'Blog',
@@ -10,5 +14,9 @@ export const navList = [
     {
         path: '/notes',
         name: 'Notes',
+    },
+    {
+        path: '/collection',
+        name: 'Collection',
     },
 ]
