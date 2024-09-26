@@ -64,9 +64,9 @@ function eventFn(e: any) {
         nextFn()
     }
 }
-window.addEventListener('keydown', eventFn)
+window?.addEventListener('keydown', eventFn)
 onBeforeUnmount(() => {
-    window.removeEventListener('keydown', eventFn)
+    window?.removeEventListener('keydown', eventFn)
 })
 </script>
 
