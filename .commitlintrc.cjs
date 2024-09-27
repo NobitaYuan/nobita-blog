@@ -20,6 +20,11 @@ module.exports = {
         },
         types: [
             {
+                value: 'blog📑',
+                name: 'blog:     📑   博客更新 | blog update',
+                emoji: ':sparkles:',
+            },
+            {
                 value: 'feat✨',
                 name: 'feat:     ✨   新增功能 | A new feature',
                 emoji: ':sparkles:',
