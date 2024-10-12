@@ -29,6 +29,7 @@ subtitle: 一些我认为有意思的、小巧的、实用的、技术力的或�
 -   [免费的 Notion 风格头像在线制作器](https://www.notionavatarmaker.com/zh)
 -   [计算你的的退休年龄（根据最新政策）](https://daojishi.fun/)
 -   [精致且美观的的CSS动画合集（附源码）](https://uiverse.io/loaders)
+-   [一个纯前端的二次元动作捕捉方案，在网页上，从视频/图片/摄像头提取动作、表情来控制动画角色](https://mikapo.amyang.dev/)
 
 ### 分享🍰
 
