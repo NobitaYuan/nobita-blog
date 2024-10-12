@@ -63,3 +63,5 @@ place: 灵山
 ![大战前夕](/images/bmwk-3.png)
 ![势均力敌](/images/bmwk-4.png)
 ![永远值得](/images/bmwk-1.png)
+
+<commentBox/>

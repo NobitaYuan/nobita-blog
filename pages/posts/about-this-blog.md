@@ -21,3 +21,5 @@ hi，welcome to my zone~
 > 托尼老师为 {Vue}生态所做的贡献，相信不需要过多言说了，但凡你做过Vue项目，那一定或多或少直接或间接的受到过他的帮助。
 >
 > 希望自己以后也能为开源社区做些贡献，be a fanatical open sourceror~
+
+<commentBox/>
