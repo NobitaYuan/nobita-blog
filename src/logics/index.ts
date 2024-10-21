@@ -62,6 +62,6 @@ export function formatDate(d: string | Date, onlyDate = true) {
     }
     // 设置为中文
     if (onlyDate || date.year() === dayjs().year())
-        return date.format('MMM D')
-    return date.format('MMM D, YYYY')
+        return date.format('MMMD')
+    return date.format('MMMD, YYYY')
 }

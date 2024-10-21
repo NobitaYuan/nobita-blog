@@ -101,8 +101,11 @@ const ArtComponent = computed(() => {
         </p>
         <div class="flex gap-4  items-center !-mt-8 it">
             <p v-if="frontmatter.date" class="opacity-50  slide-enter-50">
-                {{ formatDate(frontmatter.date, false) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
+                {{ formatDate(frontmatter.date, false) }}
+                <span v-if="frontmatter.duration">· {{ frontmatter.duration }}
+                </span>
             </p>
+
             <p v-if="frontmatter.place" class="">
                 <a class="opacity-50" :href="`https://ditu.amap.com/search?query=${frontmatter.place}`" target="_blank">
                     <span class="text-3"> <i i-simple-line-icons-location-pin /> </span>
