@@ -2,12 +2,8 @@ import { join } from 'node:path'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 
-const postsDir = ('./pages')
-const saveDir = ('./src/data/search-index.json')
-
-console.log('__dir__dir__dir__dir__dir__dir__dir', postsDir, saveDir)
-console.log('_dirname', __dirname)
-console.log('_filename', __filename)
+const postsDir = join(__dirname, '../pages')
+const saveDir = join(__dirname, '../src/data/search-index.json')
 
 // 获取所有md文件的路径
 async function getMarkdownFiles(dir: string) {
@@ -28,9 +24,7 @@ async function getMarkdownFiles(dir: string) {
 
 export async function generateSearchIndex() {
     try {
-        console.log('_dirname', __dirname, join(__dirname, '../pages'))
-
-        const filePaths = await getMarkdownFiles(join(__dirname, '../pages'))
+        const filePaths = await getMarkdownFiles(postsDir)
         const index = await Promise.all(filePaths.map(async (path) => {
             const mdFile = await fs.readFile(path, 'utf-8')
             const { data, content } = matter(mdFile)
@@ -41,8 +35,10 @@ export async function generateSearchIndex() {
                 content,
             }
         }))
-        console.log('saveDir', saveDir)
-        await fs.writeJson(join(__dirname, '../src/data/search-index.json'), index)
+        // 创建文件夹
+        await fs.ensureDir(join(__dirname, '../src/data'))
+        // 写入文件
+        await fs.writeJson(saveDir, index)
     }
     catch (error) {
         console.error('😫😫😫 generateSearchIndex 😫😫😫 ')

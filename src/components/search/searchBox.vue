@@ -97,9 +97,6 @@ onUnmounted(() => {
                     <ul class="list">
                         <li v-for="(item, idx) in results" :key="idx" class="item slide-enter">
                             <a :href="item.path">
-                                {{ item.path }}
-                            </a>
-                            <RouterLink :to="item.path.replaceAll('\\', '/')">
                                 {{ item.title }}
                                 <p>
                                     <template v-if="item.data?.date">
@@ -107,7 +104,16 @@ onUnmounted(() => {
                                     </template>
                                     {{ item.data.subtitle }}
                                 </p>
-                            </RouterLink>
+                            </a>
+                            <!-- <RouterLink :to="item.path.replaceAll('\\', '/')">
+                                {{ item.title }}
+                                <p>
+                                    <template v-if="item.data?.date">
+                                        {{ formatDate(item.data.date, false) }} ——
+                                    </template>
+                                    {{ item.data.subtitle }}
+                                </p>
+                            </RouterLink> -->
                         </li>
                     </ul>
                 </div>
