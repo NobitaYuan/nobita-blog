@@ -6,17 +6,17 @@ const { y: scroll } = useWindowScroll()
 
 <template>
     <header class="header" :class="{ isScroll: scroll > 80 }">
-        <RouterLink class="w-12 h-12 absolute xl:fixed m-5 select-none outline-none" to="/" focusable="false">
+        <RouterLink class="logo_box" to="/" focusable="false">
             <NobitaLogo />
         </RouterLink>
         <nav class="nav">
             <div class="spacer" />
             <div class="right" print:op0>
+                <searchBox />
                 <template v-for="item in navList" :key="item.path">
                     <RouterLink
-                        :to="item.path"
-                        :title="item.name"
-                        :active-class=" $route.path === item.path ? '!opacity-100' : ''"
+                        :to="item.path" :title="item.name"
+                        :active-class="$route.path === item.path ? '!opacity-100' : ''"
                     >
                         {{ item.name }}
                     </RouterLink>
@@ -58,53 +58,63 @@ const { y: scroll } = useWindowScroll()
     top: 0;
     width: 100%;
     z-index: 99;
-}
-.isScroll {
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    background-image: radial-gradient(transparent 1px, #ffffff25 2px);
-    background-size: 4px 4px;
-    backdrop-filter: saturate(50%) blur(4px);
-    -webkit-backdrop-filter: saturate(50%) blur(4px);
-}
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0rem 2rem 0rem 1.25rem;
 
-.nav {
-    padding: 1.5rem 2rem;
-    padding-bottom: 1.5rem;
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto max-content;
-    box-sizing: border-box;
-}
+    &.isScroll {
+        background-image: radial-gradient(transparent 1px, #ffffff25 2px);
+        background-size: 4px 4px;
+        backdrop-filter: saturate(50%) blur(4px);
+        -webkit-backdrop-filter: saturate(50%) blur(4px);
+    }
 
-.nav > * {
-    margin: auto;
-}
+    .logo_box {
+        width: 3rem;
+        height: 3rem;
+        padding-top: 1rem;
+        user-select: none;
+        outline: none;
+    }
 
-.nav img {
-    margin-bottom: 0;
-}
+    .nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto max-content;
+        box-sizing: border-box;
+        padding-top: 1.5rem;
 
-.nav a {
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-    transition: opacity 0.2s ease;
-    opacity: 0.6;
-    outline: none;
-}
+        .right {
+            display: grid;
+            grid-gap: 1.2rem;
+            grid-auto-flow: column;
 
-.nav a:hover {
-    opacity: 1;
-    text-decoration-color: inherit;
-}
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                color: inherit;
+                transition: opacity 0.2s ease;
+                opacity: 0.6;
+                outline: none;
 
-.nav .right {
-    display: grid;
-    grid-gap: 1.2rem;
-    grid-auto-flow: column;
-}
+                &:hover {
+                    opacity: 1;
+                    text-decoration-color: inherit;
+                }
+            }
+        }
+    }
 
-.nav .right > * {
-    margin: auto;
+    /* 媒体查询 */
+    @media (max-width: 500px) {
+        padding-right: 1.25rem;
+
+        .nav {
+            .right {
+                grid-gap: 0.8rem;
+            }
+        }
+    }
 }
 </style>

@@ -24,6 +24,7 @@ import SVG from 'vite-svg-loader'
 // @ts-expect-error missing types
 import TOC from 'markdown-it-table-of-contents'
 import vueDevTools from 'vite-plugin-vue-devtools'
+import { generateSearchIndex } from './scripts/generate-search-index'
 import { slugify } from './scripts/slugify'
 
 const promises: Promise<any>[] = []
@@ -222,6 +223,13 @@ export default defineConfig({
             name: 'await',
             async closeBundle() {
                 await Promise.all(promises)
+            },
+        },
+        // 生成全栈文本搜索json
+        {
+            name: 'generate-search-index',
+            buildStart() {
+                generateSearchIndex()
             },
         },
     ],

@@ -12,3 +12,5 @@ sponsors.*
 drafts
 *.log
 src/data/sponsors-circles.json
+src/data/search-index.json
+
