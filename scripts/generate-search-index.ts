@@ -6,6 +6,8 @@ const postsDir = ('./pages')
 const saveDir = ('./src/data/search-index.json')
 
 console.log('__dir__dir__dir__dir__dir__dir__dir', postsDir, saveDir)
+console.log('_dirname', __dirname)
+console.log('_filename', __filename)
 
 // 获取所有md文件的路径
 async function getMarkdownFiles(dir: string) {
