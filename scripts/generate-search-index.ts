@@ -2,8 +2,8 @@ import { join } from 'node:path'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 
-const postsDir = join(__dirname, '../pages')
-const saveDir = join(__dirname, '../src/data/search-index.json')
+const postsDir = ('./pages')
+const saveDir = ('./src/data/search-index.json')
 
 console.log('__dir__dir__dir__dir__dir__dir__dir', postsDir, saveDir)
 
@@ -26,7 +26,7 @@ async function getMarkdownFiles(dir: string) {
 
 export async function generateSearchIndex() {
     try {
-        const filePaths = await getMarkdownFiles(postsDir)
+        const filePaths = await getMarkdownFiles('./pages')
         const index = await Promise.all(filePaths.map(async (path) => {
             const mdFile = await fs.readFile(path, 'utf-8')
             const { data, content } = matter(mdFile)
@@ -38,8 +38,7 @@ export async function generateSearchIndex() {
             }
         }))
         console.log('saveDir', saveDir)
-        console.log('index', index)
-        await fs.writeJson(saveDir, index)
+        await fs.writeJson('./src/data/search-index.json', index)
     }
     catch (error) {
         console.error('😫😫😫 generateSearchIndex 😫😫😫 ')
