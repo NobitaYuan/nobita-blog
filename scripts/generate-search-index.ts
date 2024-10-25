@@ -28,7 +28,9 @@ async function getMarkdownFiles(dir: string) {
 
 export async function generateSearchIndex() {
     try {
-        const filePaths = await getMarkdownFiles('./pages')
+        console.log('_dirname', __dirname, join(__dirname, '../pages'))
+
+        const filePaths = await getMarkdownFiles(join(__dirname, '../pages'))
         const index = await Promise.all(filePaths.map(async (path) => {
             const mdFile = await fs.readFile(path, 'utf-8')
             const { data, content } = matter(mdFile)
@@ -40,7 +42,7 @@ export async function generateSearchIndex() {
             }
         }))
         console.log('saveDir', saveDir)
-        await fs.writeJson('./src/data/search-index.json', index)
+        await fs.writeJson(join(__dirname, '../src/data/search-index.json'), index)
     }
     catch (error) {
         console.error('😫😫😫 generateSearchIndex 😫😫😫 ')
