@@ -2,7 +2,10 @@ import { join } from 'node:path'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 
-const postsDir = join('pages')
+const postsDir = join(__dirname, '../pages')
+const saveDir = join(__dirname, '../src/data/search-index.json')
+
+console.log('__dir__dir__dir__dir__dir__dir__dir', postsDir, saveDir)
 
 // 获取所有md文件的路径
 async function getMarkdownFiles(dir: string) {
@@ -34,12 +37,14 @@ export async function generateSearchIndex() {
                 content,
             }
         }))
-        await fs.writeJson(join('src/data/search-index.json'), index)
+        console.log('saveDir', saveDir)
+        console.log('index', index)
+        await fs.writeJson(saveDir, index)
     }
     catch (error) {
-        console.error('😫😫😫 Error generateSearchIndex 😫😫😫 ')
+        console.error('😫😫😫 generateSearchIndex 😫😫😫 ')
         console.error('postsDir:', postsDir)
         console.error('error:', error)
-        console.error('😫😫😫 Error generateSearchIndex 😫😫😫 ', error)
+        console.error('😫😫😫  generateSearchIndex 😫😫😫 ', error)
     }
 }
