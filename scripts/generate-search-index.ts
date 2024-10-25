@@ -1,8 +1,8 @@
-import { join, resolve } from 'node:path'
+import { join } from 'node:path'
 import fs from 'fs-extra'
 import matter from 'gray-matter'
 
-const postsDir = resolve('pages')
+const postsDir = join('pages')
 
 // 获取所有md文件的路径
 async function getMarkdownFiles(dir: string) {
@@ -37,6 +37,9 @@ export async function generateSearchIndex() {
         await fs.writeJson(join('src/data/search-index.json'), index)
     }
     catch (error) {
-        console.error('😫😫😫😫😫😫 Error generating search index:', error)
+        console.error('😫😫😫 Error generateSearchIndex 😫😫😫 ')
+        console.error('postsDir:', postsDir)
+        console.error('error:', error)
+        console.error('😫😫😫 Error generateSearchIndex 😫😫😫 ', error)
     }
 }
