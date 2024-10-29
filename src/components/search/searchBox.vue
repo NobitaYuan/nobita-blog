@@ -75,6 +75,14 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener('keydown', ctrlF)
 })
+// 监听路由变化,关闭搜索栏
+const route = useRoute()
+watch(
+    () => route.path,
+    () => {
+        isSearch.value = false
+    },
+)
 </script>
 
 <template>
@@ -96,7 +104,7 @@ onUnmounted(() => {
                     </viewportAnimation>
                     <ul class="list">
                         <li v-for="(item, idx) in results" :key="idx" class="item slide-enter">
-                            <a :href="item.path">
+                            <!-- <a :href="item.path">
                                 {{ item.title }}
                                 <p>
                                     <template v-if="item.data?.date">
@@ -104,8 +112,8 @@ onUnmounted(() => {
                                     </template>
                                     {{ item.data.subtitle }}
                                 </p>
-                            </a>
-                            <!-- <RouterLink :to="item.path.replaceAll('\\', '/')">
+                            </a> -->
+                            <RouterLink :to="item.path.replaceAll('\\', '/')">
                                 {{ item.title }}
                                 <p>
                                     <template v-if="item.data?.date">
@@ -113,7 +121,7 @@ onUnmounted(() => {
                                     </template>
                                     {{ item.data.subtitle }}
                                 </p>
-                            </RouterLink> -->
+                            </RouterLink>
                         </li>
                     </ul>
                 </div>

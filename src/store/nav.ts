@@ -8,15 +8,15 @@ export const navList: navListItemType[] = [
         name: 'Blog',
     },
     {
-        path: '/game',
-        name: 'Game',
-    },
-    {
         path: '/notes',
         name: 'Notes',
     },
     {
         path: '/collection',
         name: 'Collection',
+    },
+    {
+        path: '/game',
+        name: 'Game',
     },
 ]

@@ -7,8 +7,8 @@ const saveDir = join(__dirname, '../src/data/search-index.json')
 
 // 获取所有md文件的路径
 async function getMarkdownFiles(dir: string) {
-    const entries = await fs.readdir(dir, { withFileTypes: true })
-    const markdownFiles: any = await Promise.all(entries.map(async (entry) => {
+    const allDir = await fs.readdir(dir, { withFileTypes: true })
+    const markdownFiles: any = await Promise.all(allDir.map(async (entry) => {
         const filePath = join(dir, entry.name)
         if (entry.isDirectory()) {
             return getMarkdownFiles(filePath)
@@ -25,7 +25,7 @@ async function getMarkdownFiles(dir: string) {
 export async function generateSearchIndex() {
     try {
         const filePaths = await getMarkdownFiles(postsDir)
-        const index = await Promise.all(filePaths.map(async (path) => {
+        const jsonItem = await Promise.all(filePaths.map(async (path) => {
             const mdFile = await fs.readFile(path, 'utf-8')
             const { data, content } = matter(mdFile)
             return {
@@ -38,7 +38,7 @@ export async function generateSearchIndex() {
         // 创建文件夹
         await fs.ensureDir(join(__dirname, '../src/data'))
         // 写入文件
-        await fs.writeJson(saveDir, index)
+        await fs.writeJson(saveDir, jsonItem)
     }
     catch (error) {
         console.error('😫😫😫 generateSearchIndex 😫😫😫 ')
