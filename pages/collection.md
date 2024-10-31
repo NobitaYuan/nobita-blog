@@ -1,7 +1,7 @@
 ---
-title: Collection😋
+title: Collection
 # display: Bookmarks
-subtitle: 一些我认为有意思的、小巧的、实用的、技术力的或者美观的一些搜集~
+subtitle: 世间般般件件，皆唯我所用
 ---
 
 <br/>
