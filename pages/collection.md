@@ -8,20 +8,21 @@ subtitle: 世间般般件件，皆唯我所用
 
 ### 小芝士🧀
 
--   [使用 JS 检测大写键（英文）](https://davidwalsh.name/detect-caps-lock)
--   [浏览器中指定 PDF 的跳转页面（英文）](https://technicalwriting.dev/www/pdf.html)
+-   [使用 JS 检测大写键（EN）](https://davidwalsh.name/detect-caps-lock)
+-   [浏览器中指定 PDF 的跳转页面（EN）](https://technicalwriting.dev/www/pdf.html)
 -   [使用 JS 获取设备电量 ](https://deepesh-01.github.io/battery_indicator/)——[【源码】](https://deepesh-01.github.io/battery_indicator/app.js)
 
 ### 技术🔧
 
--   [如何优化JS代码（英文）](https://romgrk.com/posts/optimizing-javascript)
+-   [如何优化JS代码（EN）](https://romgrk.com/posts/optimizing-javascript)
 -   [技术博客聚合](https://daily-blog.chlinlearn.top/)
--   [前端构建概述——综合介绍前端构建的概念、步骤和工具（英文）](https://sunsetglow.net/posts/frontend-build-systems.html)
--   [如何制作 SVG Loading（英文）](https://www.fffuel.co/svg-spinner/)
--   [tsconfig.json 的正确用法（英文）](https://kettanaito.com/blog/one-thing-nobody-explained-to-you-about-typescript)
--   [详细介绍如何使用 Media Query 完成响应式设计（英文）](https://engineering.kablamo.com.au/posts/2023/media-queries-and-responsive-design/)
+-   [前端构建概述——综合介绍前端构建的概念、步骤和工具（EN）](https://sunsetglow.net/posts/frontend-build-systems.html)
+-   [如何制作 SVG Loading（EN）](https://www.fffuel.co/svg-spinner/)
+-   [tsconfig.json 的正确用法（EN）](https://kettanaito.com/blog/one-thing-nobody-explained-to-you-about-typescript)
+-   [详细介绍如何使用 Media Query 完成响应式设计（EN）](https://engineering.kablamo.com.au/posts/2023/media-queries-and-responsive-design/)
 -   [用纯 CSS 实现网格背景](https://spacexcode.com/blog/pure-css-grid-line/)
 -   [Vite 原理浅析](https://molunerfinn.com/learn-vite/)
+-   [现代CSS重置方式 - A Modern CSS Reset（EN）](https://www.joshwcomeau.com/css/custom-css-reset/)
 
 ### 工具🛠️
 
