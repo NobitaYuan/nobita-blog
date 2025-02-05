@@ -23,6 +23,7 @@ subtitle: 世间般般件件，皆唯我所用
 -   [用纯 CSS 实现网格背景](https://spacexcode.com/blog/pure-css-grid-line/)
 -   [Vite 原理浅析](https://molunerfinn.com/learn-vite/)
 -   [现代CSS重置方式 - A Modern CSS Reset（EN）](https://www.joshwcomeau.com/css/custom-css-reset/)
+-   [无限滚动轮播的 CSS 实现（EN）](https://blog.logto.io/css-only-infinite-scroll)
 
 ### 工具🛠️
 
