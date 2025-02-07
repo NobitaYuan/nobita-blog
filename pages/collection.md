@@ -24,6 +24,7 @@ subtitle: 世间般般件件，皆唯我所用
 -   [Vite 原理浅析](https://molunerfinn.com/learn-vite/)
 -   [现代CSS重置方式 - A Modern CSS Reset（EN）](https://www.joshwcomeau.com/css/custom-css-reset/)
 -   [无限滚动轮播的 CSS 实现（EN）](https://blog.logto.io/css-only-infinite-scroll)
+-   [Figma是如何实现多人协作的](https://myblackboxrecorder.com/how-figmas-multiplayer-technology-works/)
 
 ### 工具🛠️
 
