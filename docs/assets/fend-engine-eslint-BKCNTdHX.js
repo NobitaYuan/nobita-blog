@@ -1,0 +1,1657 @@
+import {
+  u as n,
+  _ as i,
+} from "./WrapperPost.vue_vue_type_script_setup_true_lang-d5S1uDSL.js";
+import { o as r, c as p, w as d, a as s, b as t } from "./app-CVuLZ3l0.js";
+const D = {
+  __name: "fend-engine-eslint",
+  setup(h) {
+    const l = {
+      title: "前端工程—配置Eslint",
+      subtitle: "用于新项目快速配置",
+      lang: "zh",
+      duration: "2min",
+      type: "blog",
+      date: "2023-8-7",
+      meta: [
+        { property: "og:title", content: "前端工程—配置Eslint" },
+        { name: "twitter:title", content: "前端工程—配置Eslint" },
+      ],
+    };
+    return (
+      n({
+        title: "前端工程—配置Eslint",
+        meta: [
+          { property: "og:title", content: "前端工程—配置Eslint" },
+          { name: "twitter:title", content: "前端工程—配置Eslint" },
+        ],
+      }),
+      (k, a) => {
+        const e = i;
+        return (
+          r(),
+          p(
+            e,
+            { frontmatter: l },
+            {
+              default: d(
+                () =>
+                  a[0] ||
+                  (a[0] = [
+                    s(
+                      "div",
+                      { class: "prose m-auto slide-enter-content" },
+                      [
+                        s("h3", { id: "eslint", tabindex: "-1" }, [
+                          t("Eslint "),
+                          s(
+                            "a",
+                            {
+                              class: "header-anchor",
+                              href: "#eslint",
+                              "aria-hidden": "true",
+                            },
+                            "#",
+                          ),
+                        ]),
+                        s("ol", null, [s("li", null, "安装")]),
+                        s(
+                          "pre",
+                          {
+                            class:
+                              "shiki shiki-themes vitesse-dark vitesse-light",
+                            style: {
+                              "--s-dark": "#dbd7caee",
+                              "--s-light": "#393a34",
+                              "--s-dark-bg": "#121212",
+                              "--s-light-bg": "#ffffff",
+                            },
+                            tabindex: "0",
+                          },
+                          [
+                            s("code", { class: "language-shell" }, [
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#80A665",
+                                      "--s-light": "#59873A",
+                                    },
+                                  },
+                                  "pnpm",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  " i",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C99076",
+                                      "--s-light": "#A65E2B",
+                                    },
+                                  },
+                                  " -d",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "  eslint",
+                                ),
+                              ]),
+                            ]),
+                          ],
+                        ),
+                        s("ol", { start: "2" }, [
+                          s("li", null, "生成配置文件"),
+                        ]),
+                        s(
+                          "pre",
+                          {
+                            class:
+                              "shiki shiki-themes vitesse-dark vitesse-light",
+                            style: {
+                              "--s-dark": "#dbd7caee",
+                              "--s-light": "#393a34",
+                              "--s-dark-bg": "#121212",
+                              "--s-light-bg": "#ffffff",
+                            },
+                            tabindex: "0",
+                          },
+                          [
+                            s("code", { class: "language-shell" }, [
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#80A665",
+                                      "--s-light": "#59873A",
+                                    },
+                                  },
+                                  "./node_modules/.bin/eslint",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C99076",
+                                      "--s-light": "#A65E2B",
+                                    },
+                                  },
+                                  " --init",
+                                ),
+                              ]),
+                            ]),
+                          ],
+                        ),
+                        s("ol", { start: "3" }, [
+                          s("li", null, "个人常用的配置"),
+                        ]),
+                        s(
+                          "pre",
+                          {
+                            class:
+                              "shiki shiki-themes vitesse-dark vitesse-light",
+                            style: {
+                              "--s-dark": "#dbd7caee",
+                              "--s-light": "#393a34",
+                              "--s-dark-bg": "#121212",
+                              "--s-light-bg": "#ffffff",
+                            },
+                            tabindex: "0",
+                          },
+                          [
+                            s("code", { class: "language-js" }, [
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  "/*",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  '"off"   或者0  //关闭规则关闭',
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  '"warn"  或者1  //在打开的规则作为警告（不影响退出代码）',
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  '"error" 或者2  //把规则作为一个错误（退出代码触发时为1）',
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  "*/",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "rules",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#DBD7CAEE",
+                                      "--s-light": "#393A34",
+                                    },
+                                  },
+                                  ": ",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  "{",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "@typescript-eslint/no-explicit-any",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  ' "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "off",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " // 允许使用any",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "@typescript-eslint/no-unused-vars",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  " 2",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " //变量声明了但未使用",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  '    // "semi": [1, "always"], // 分号',
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  '    // "indent": [1, 4], //缩进风格',
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "quotes",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " [",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  "2",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  ' "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "double",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  "],",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " // 引号类型 \"double\" 'single' `backtick`",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "semi-spacing",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " [",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  "1",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " {",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  ' "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "before",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4D9375",
+                                      "--s-light": "#1E754F",
+                                    },
+                                  },
+                                  " false",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  ' "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "after",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4D9375",
+                                      "--s-light": "#1E754F",
+                                    },
+                                  },
+                                  " true",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " }],",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " //分号前后空格",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "use-isnan",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  " 2",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " //禁止比较时使用NaN，只能用isNaN()",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "valid-jsdoc",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  " 1",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " //jsdoc规则",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "max-depth",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " [",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  "0",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  " 4",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  "],",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " //嵌套块深度",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "@typescript-eslint/ban-ts-comment",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  ' "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "off",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " // 添加下面这行规则来允许使用 // @ts-ignore",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "vue/multi-word-component-names",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " [",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  "2",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " {",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  ' "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "ignores",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " [",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "index",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  ' "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "continue",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  "]",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  " }],",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " //组件名字使用两个单词，忽略index",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "vue/no-setup-props-destructure",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  " 0",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " // 允许使用props解构",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "@typescript-eslint/no-this-alias",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  " 0",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ",",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " // 更改this别名",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '    "',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D",
+                                      "--s-light": "#B56959",
+                                    },
+                                  },
+                                  "no-extra-semi",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#C98A7D77",
+                                      "--s-light": "#B5695977",
+                                    },
+                                  },
+                                  '"',
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  ":",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#4C9A91",
+                                      "--s-light": "#2F798A",
+                                    },
+                                  },
+                                  " 0",
+                                ),
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#758575DD",
+                                      "--s-light": "#A0ADA0",
+                                    },
+                                  },
+                                  " // 不必要的分号",
+                                ),
+                              ]),
+                              t(`
+`),
+                              s("span", { class: "line" }, [
+                                s(
+                                  "span",
+                                  {
+                                    style: {
+                                      "--s-dark": "#666666",
+                                      "--s-light": "#999999",
+                                    },
+                                  },
+                                  "    }",
+                                ),
+                              ]),
+                            ]),
+                          ],
+                        ),
+                      ],
+                      -1,
+                    ),
+                  ]),
+              ),
+              _: 1,
+            },
+          )
+        );
+      }
+    );
+  },
+};
+export { D as default };

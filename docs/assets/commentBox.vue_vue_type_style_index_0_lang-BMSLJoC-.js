@@ -1,0 +1,34 @@
+import { e as o, p as s, z as r, o as c, h as a } from "./app-CVuLZ3l0.js";
+const u = o({
+  __name: "commentBox",
+  setup(m) {
+    const n = s(null);
+    return (
+      r(() => {
+        var e;
+        const t = document.createElement("script");
+        (t.src = "https://utteranc.es/client.js"),
+          t.setAttribute("repo", "NobitaYuan/nobita-blog"),
+          t.setAttribute("issue-term", "pathname"),
+          t.setAttribute("theme", "github-light"),
+          t.setAttribute("crossorigin", "anonymous"),
+          (t.async = !0),
+          (e = n.value) == null || e.appendChild(t);
+      }),
+      (t, e) => (
+        c(),
+        a(
+          "div",
+          {
+            ref_key: "commentDom",
+            ref: n,
+            class: "comment slide-enter-content",
+          },
+          null,
+          512,
+        )
+      )
+    );
+  },
+});
+export { u as _ };

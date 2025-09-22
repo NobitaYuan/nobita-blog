@@ -11,7 +11,7 @@ Hey, I am Nobita Yuan, a Front End Developer.
 
 ---
 
-围绕 {Vue} 生态，已有**一年**多的技术积累和实践经验
+围绕 {Vue} 生态，已有**两年**的技术积累和实践经验
 
 主用技术栈 {Vue} {Vite} {TypeScript} ...
 
