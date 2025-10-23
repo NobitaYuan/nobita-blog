@@ -29,6 +29,7 @@ subtitle: 世间般般件件，皆唯我所用
 -   [CSS新属性：可实现el-tooltip类似的功能](https://developer.chrome.com/blog/anchor-positioning-api?hl=zh-cn%EF%BC%89)
 -   [HTML新标签：不用一行JS和CSS实现手风琴效果](https://developer.chrome.com/docs/css-ui/exclusive-accordion?hl=zh-cn)
 -   [大屏投屏功能示例](https://juejin.cn/post/7490588889947865142)
+-   [SVG入门](https://www.joshwcomeau.com/svg/friendly-introduction-to-svg/)
 
 ### 工具🛠️
 
