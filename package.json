@@ -4,6 +4,7 @@
     "packageManager": "pnpm@9.10.0",
     "scripts": {
         "build": "cross-env NODE_ENV=production vite-ssg build && copy _dist_redirects docs/_redirects",
+        "copy": "copy _dist_redirects docs/_redirects && copy CNAME docs/CNAME",
         "build-old": "npm run static && cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
         "dev": "vite --port 3333",
         "dev-op": "vite --port 3333 --open",
