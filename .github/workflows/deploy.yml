@@ -34,7 +34,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: 配置 pnpm
-      - uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v2
         with:
               version: 10
       - name: 配置环境
