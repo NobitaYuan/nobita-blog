@@ -31,28 +31,36 @@ jobs:
     steps:
       - name: 拉取代码：Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
+
+      - name: 启动配置：Setup Pages
         uses: actions/configure-pages@v5
-      - name: 配置 pnpm
-        uses: pnpm/action-setup@v2
-        with:
-              version: 10
-      - name: 配置环境
+
+      - name: 配置node环境
         uses: actions/setup-node@v4
         with:
               node-version: 20
               cache: "pnpm"
+
+      - name: 配置pnpm环境
+        uses: pnpm/action-setup@v2
+        with:
+              version: 10
+
       - name: 安装依赖
         run: pnpm install
+        
       - name: 查看当前路径
         run: pwd && ls
+
       - name: 打包
         run: pnpm build
+
       - name: 上传制品：Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: './dist'
-      - name: Deploy to GitHub Pages
+          
+      - name: 部署到GitHub Pages：Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
