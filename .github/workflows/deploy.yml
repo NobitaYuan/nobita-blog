@@ -29,7 +29,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: 拉取代码
+      - name: 拉取代码：Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -44,9 +44,11 @@ jobs:
               cache: "pnpm"
       - name: 安装依赖
         run: pnpm install
+      - name: 查看当前路径
+        run: pwd && ls
       - name: 打包
         run: pnpm build
-      - name: Upload artifact
+      - name: 上传制品：Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
