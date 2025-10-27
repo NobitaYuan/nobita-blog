@@ -33,6 +33,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: 打包构建
+        with:
+            node-verstion:20
+            cache:'npm'
+      - name: 安装依赖
+        run: npm install
+      - name: 打包
+      - run: npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
