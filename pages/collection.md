@@ -11,6 +11,9 @@ subtitle: 世间般般件件，皆唯我所用
 -   [使用 JS 检测大写键（EN）](https://davidwalsh.name/detect-caps-lock)
 -   [浏览器中指定 PDF 的跳转页面（EN）](https://technicalwriting.dev/www/pdf.html)
 -   [使用 JS 获取设备电量 ](https://deepesh-01.github.io/battery_indicator/)——[【源码】](https://deepesh-01.github.io/battery_indicator/app.js)
+-   [SVG入门](https://www.joshwcomeau.com/svg/friendly-introduction-to-svg/)
+-   [CSS新属性：可实现el-tooltip类似的功能](https://developer.chrome.com/blog/anchor-positioning-api?hl=zh-cn%EF%BC%89)
+-   [HTML新标签：不用一行JS和CSS实现手风琴效果](https://developer.chrome.com/docs/css-ui/exclusive-accordion?hl=zh-cn)
 
 ### 技术🔧
 
@@ -26,12 +29,10 @@ subtitle: 世间般般件件，皆唯我所用
 -   [无限滚动轮播的 CSS 实现（EN）](https://blog.logto.io/css-only-infinite-scroll)
 -   [Figma是如何实现多人协作的](https://myblackboxrecorder.com/how-figmas-multiplayer-technology-works/)
 -   [各种毛玻璃效果的实现](https://www.tyleo.com/guides/html-glass)
--   [CSS新属性：可实现el-tooltip类似的功能](https://developer.chrome.com/blog/anchor-positioning-api?hl=zh-cn%EF%BC%89)
--   [HTML新标签：不用一行JS和CSS实现手风琴效果](https://developer.chrome.com/docs/css-ui/exclusive-accordion?hl=zh-cn)
 -   [大屏投屏功能示例](https://juejin.cn/post/7490588889947865142)
--   [SVG入门](https://www.joshwcomeau.com/svg/friendly-introduction-to-svg/)
 -   [根据用户搜索的主题，显示相关地图和解释文章](https://mapedia.cc/)
 -   [这个网页号称由100万张网页截图组成，可以放大缩小查看](https://onemillionscreenshots.com/)
+-   [CSS和SVG实现的液态玻璃效果，非常惊艳！](https://kube.io/blog/liquid-glass-css-svg/)
 
 
 ### 工具🛠️
