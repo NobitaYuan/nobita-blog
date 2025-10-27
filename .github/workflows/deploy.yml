@@ -29,19 +29,23 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 拉取代码
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: 配置 pnpm
+      - uses: pnpm/action-setup@v2
+        with:
+              version: 10
       - name: 配置环境
         uses: actions/setup-node@v4
         with:
               node-version: 20
-              cache: "npm"
+              cache: "pnpm"
       - name: 安装依赖
-        run: npm install
+        run: pnpm install
       - name: 打包
-        run: npm run build
+        run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
