@@ -32,5 +32,6 @@ declare module 'vue-router/auto-routes' {
     '/posts/fend-engine-git-ommit': RouteRecordInfo<'/posts/fend-engine-git-ommit', '/posts/fend-engine-git-ommit', Record<never, never>, Record<never, never>>,
     '/posts/fend-engine-husky': RouteRecordInfo<'/posts/fend-engine-husky', '/posts/fend-engine-husky', Record<never, never>, Record<never, never>>,
     '/posts/read-g6-source-code': RouteRecordInfo<'/posts/read-g6-source-code', '/posts/read-g6-source-code', Record<never, never>, Record<never, never>>,
+    '/posts/Thinking, Fast and Slow': RouteRecordInfo<'/posts/Thinking, Fast and Slow', '/posts/Thinking, Fast and Slow', Record<never, never>, Record<never, never>>,
   }
 }
