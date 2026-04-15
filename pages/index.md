@@ -41,7 +41,7 @@ Find me on
 
 <p flex="~ gap-2 wrap" class="mt--2!">
   <a href="https://github.com/NobitaYuan" target="_blank"><span op75 i-simple-icons-github /> GitHub</a>
-  <a href="https://space.bilibili.com/19217489" target="_blank"><span op75 i-simple-icons-bilibili /> 哔哩哔哩</a>
+  <!-- <a href="https://space.bilibili.com/19217489" target="_blank"><span op75 i-simple-icons-bilibili /> 哔哩哔哩</a> -->
 
 </p>
 
