@@ -168,6 +168,7 @@ export default defineConfig({
                             link: 'https://vercel.com',
                             imageUrl: 'https://github.com/vercel.png',
                         },
+                        'React': 'https://zh-hans.react.dev/learn',
                     },
                     imageOverrides: [
                         ['https://github.com/vuejs/core', 'https://vuejs.org/logo.svg'],
