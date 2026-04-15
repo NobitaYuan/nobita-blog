@@ -7,17 +7,21 @@ art: random
 
 Hey, I am Nobita Yuan, a Front End Developer.
 
-你好，我是Nobita Yuan，一位23年毕业的前端新人
+
+你好，我是 Nobita Yuan，一位 23 年毕业的前端工程师
+
+围绕 Vue / React 双生态，已有四年的技术积累与企业项目实践
+
+主用技术栈 {Vue} {React} {TypeScript} {Vite} …
+
+擅长领域：可视化图编辑器（mxGraph / Vue Flow / G6）、AI 工程集成（Agent / SSE / Prompt Engineering）
+
+企业项目经验涵盖 军事建模平台、知识图谱平台、AI 标书系统 等多个 B 端产品的核心前端开发
+
+并且也是一名 {Vim} 使用者
 
 ---
 
-围绕 {Vue} 生态，已有**两年**的技术积累和实践经验
-
-主用技术栈 {Vue} {Vite} {TypeScript} ...
-
-线上企业项目：{闪光简历} 的核心开发者
-
-并且也是一名 {Vim} 使用者
 
 <!-- {Vue} {Vite} {Node.js} {TailwindCSS}
 {TypeScript} lover Working at {NuxtLabs}<br>
