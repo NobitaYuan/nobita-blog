@@ -8,11 +8,65 @@ date: 2025-04-17
 art: random
 ---
 
-# Vue 3 响应式原理
-
 ## 一句话概括
 
 **Proxy 拦截读写 → get 时收集依赖（track）→ set 时触发更新（trigger）**
+
+---
+
+## 最小完整实现
+
+以下是 Vue 3 响应式系统的最小完整实现，只有约 30 行代码：
+
+```ts
+// 依赖存储：WeakMap<目标对象, Map<属性名, Set<副作用函数>>>
+const targetMap = new WeakMap<object, Map<PropertyKey, Set<() => void>>>();
+
+// 全局变量，记录当前正在执行的副作用函数
+let activeEffect: (() => void) | null = null;
+
+// 注册副作用：传入一个函数，立即执行一次，执行期间读到的响应式属性都会把这个函数收集为依赖
+function effect(fn: () => void) {
+  const effectFn = () => {
+    activeEffect = effectFn; // 标记：接下来执行的函数就是当前副作用
+    fn();                     // 执行用户函数 → 内部读取响应式属性 → 触发 get → 自动收集
+    activeEffect = null;      // 收集完毕，清除标记
+  };
+  effectFn(); // 首次执行，触发初次收集
+}
+
+// 依赖收集：在 Proxy 的 get 拦截器中调用，把当前副作用存进目标对象.属性的依赖集合
+function track(target: object, key: PropertyKey) {
+  if (!activeEffect) return;                        // 没有正在执行的副作用，无需收集
+  let depsMap = targetMap.get(target);
+  if (!depsMap) targetMap.set(target, (depsMap = new Map())); // 没有该对象的 Map，创建一个
+  let deps = depsMap.get(key);
+  if (!deps) depsMap.set(key, (deps = new Set()));            // 没有该属性的 Set，创建一个
+  deps.add(activeEffect);            // 把当前副作用加入集合
+}
+
+// 派发更新：在 Proxy 的 set 拦截器中调用，把目标对象.属性的所有副作用重新执行一遍
+function trigger(target: object, key: PropertyKey) {
+  targetMap.get(target)?.get(key)?.forEach(fn => fn());
+}
+
+// 创建响应式对象：用 Proxy 拦截所有属性的读写
+function reactive<T extends object>(obj: T): T {
+  return new Proxy(obj, {
+    get(target, key, receiver) {
+      track(target, key);                           // 读属性时收集依赖
+      return Reflect.get(target, key, receiver);    // 用 Reflect 保证 this 指向正确
+    },
+    set(target, key, value, receiver) {
+      Reflect.set(target, key, value, receiver);    // 先完成赋值
+      trigger(target, key);                          // 再触发依赖更新
+      return true;
+    },
+  });
+}
+```
+
+好像看懂了，但又有点懵逼？接下来直接答疑。
 
 ---
 
@@ -199,53 +253,6 @@ function effect(fn) {
 | `WeakMap` 做最外层 | 对象销毁时依赖树自动被 GC 回收 |
 | `Set` 存 effect | 自动去重 + O(1) 添加删除 |
 | 收集时机在 `get` | 不需要手动声明依赖，执行时读了什么就自动订阅什么 |
-
----
-
-## 最小完整实现
-
-```ts
-const targetMap = new WeakMap<object, Map<PropertyKey, Set<() => void>>>();
-let activeEffect: (() => void) | null = null;
-
-function effect(fn: () => void) {
-  const effectFn = () => {
-    activeEffect = effectFn;
-    fn();
-    activeEffect = null;
-  };
-  effectFn();
-}
-
-function track(target: object, key: PropertyKey) {
-  if (!activeEffect) return;
-  let depsMap = targetMap.get(target);
-  if (!depsMap) targetMap.set(target, (depsMap = new Map()));
-  let deps = depsMap.get(key);
-  if (!deps) depsMap.set(key, (deps = new Set()));
-  deps.add(activeEffect);
-}
-
-function trigger(target: object, key: PropertyKey) {
-  targetMap.get(target)?.get(key)?.forEach(fn => fn());
-}
-
-function reactive<T extends object>(obj: T): T {
-  return new Proxy(obj, {
-    get(target, key, receiver) {
-      track(target, key);
-      return Reflect.get(target, key, receiver);
-    },
-    set(target, key, value, receiver) {
-      Reflect.set(target, key, value, receiver);
-      trigger(target, key);
-      return true;
-    },
-  });
-}
-```
-
-`ref`、`computed`、`watch` 都是在这个骨架之上组装的。
 
 ---
 
