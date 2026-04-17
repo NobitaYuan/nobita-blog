@@ -125,6 +125,23 @@ targetMap (WeakMap)
 
 ---
 
+## 为什么要用全局变量 activeEffect？
+
+`effect()` 和 `track()` 之间没有直接调用关系——`effect` 执行用户函数，用户函数读到响应式属性，Proxy 的 `get` 拦截器才调用 `track()`。两条线碰不上面。
+
+全局变量 `activeEffect` 就是它们之间的桥梁：
+
+```
+effect() 设置 activeEffect = fn
+  → fn 执行 → 读 obj.count
+    → Proxy get 拦截 → track() 读 activeEffect → 知道该收集谁
+      → effect() 清除 activeEffect = null（防止后续无关读取被误收集）
+```
+
+如果不用全局变量，`track()` 就没法知道"谁在读这个属性"，依赖收集无从谈起。
+
+---
+
 ## 三个核心函数
 
 ### effect — 注册副作用
